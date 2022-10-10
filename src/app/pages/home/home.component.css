@@ -1,0 +1,9 @@
+.home__container{
+border:1px solid red;
+width: 95%;
+margin: auto;
+margin-top: 20px;
+
+display: flex;
+justify-content: space-around;
+}

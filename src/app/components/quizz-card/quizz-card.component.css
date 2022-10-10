@@ -1,0 +1,45 @@
+.quizz-card__container {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+
+  border-radius: 10px;
+  border: 3px solid grey;
+
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.quizz-card__container:hover{
+  transform: scale(1.1);
+}
+
+#quizz-card__image {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.quizz-card__container > a {
+  text-decoration: none;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+.quizz-card__title{
+  position: absolute;
+  bottom: 0px;
+  text-align: justify;
+  margin: 0 10%;
+  margin-bottom: 5px;
+}
+
+#star {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 35px;
+}
