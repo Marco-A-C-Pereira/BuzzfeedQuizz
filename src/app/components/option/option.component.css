@@ -1,0 +1,22 @@
+.option__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  margin: 5px 0;
+
+}
+
+.option__container > button {
+  width: 100%;
+  padding: 25px;
+
+  background: brown;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+
+.option__container > button:hover{
+  cursor: pointer;
+}

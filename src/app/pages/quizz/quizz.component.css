@@ -1,0 +1,52 @@
+.quizz__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90%;
+  margin: auto;
+
+  font-family: 'Segoe UI';
+  color: #456479;
+  font-weight: bold;
+
+  border: 1px solid blue;
+
+
+}
+
+.quizz__top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 75px 175px;
+  background-color: #024270;
+}
+
+.quizz__title{
+  font-size: 40px;
+}
+
+.quizz__question{
+  font-size: 30px;
+
+  margin-top: 70px;
+}
+
+.quizz__options{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 50%;
+  margin-top: 60px;
+}
+
+/* Tem uma forma melhor de dividir ? */
+app-option {
+  width: 45%;
+}
