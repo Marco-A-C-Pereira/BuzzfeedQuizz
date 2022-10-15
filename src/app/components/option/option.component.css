@@ -10,13 +10,21 @@
 
 .option__container > button {
   width: 100%;
-  padding: 25px;
+  padding: 20px;
 
-  background: brown;
-  border: 2px solid blue;
+  background: #EEA947;
+  color: #008fe7;
+  text-shadow: 2px 2px #EB8A00;;
+  border: 2px solid #00619E;
   border-radius: 10px;
+
+  font-size: 20px;
+  font-family: 'Open Sans';
+  font-weight: bold;
 }
 
 .option__container > button:hover{
   cursor: pointer;
+  position: relative;
+  top: -2px;
 }

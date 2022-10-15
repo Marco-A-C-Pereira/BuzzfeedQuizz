@@ -1,6 +1,6 @@
 <div class="home__container">
-  <app-quizz-card></app-quizz-card>
-  <app-quizz-card></app-quizz-card>
-  <app-quizz-card></app-quizz-card>
-  <app-quizz-card></app-quizz-card>
+
+  <div *ngFor="let quizz of quizzes">
+    <app-quizz-card [quizz]=quizz ></app-quizz-card>
+  </div>
 </div>

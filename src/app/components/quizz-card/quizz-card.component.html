@@ -1,11 +1,11 @@
 <div class="quizz-card__container">
-  <a href="">
+  <a [routerLink]="['/quizz', quizz.id]">
     <img
     src="assets/images/logo2.png"
     id="quizz-card__image"
     >
     <div class="quizz-card__title">
-      <h3> Descubra qual tipo de betoneira você é  </h3>
+      <h3> {{ quizz.title }}  </h3>
     </div>
     <img
     src="assets/images/star-off.png"

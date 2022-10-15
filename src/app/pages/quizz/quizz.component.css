@@ -7,12 +7,11 @@
   margin: auto;
 
   font-family: 'Segoe UI';
-  color: #456479;
+  color: #0078c2;
+  text-shadow: 2px 2px #EEA947;
   font-weight: bold;
 
   border: 1px solid blue;
-
-
 }
 
 .quizz__top{
@@ -24,7 +23,8 @@
   margin: auto;
   margin-top: 50px;
   padding: 75px 175px;
-  background-color: #024270;
+  background-color: #EB8A00;
+  border: 2px solid  #EEA947
 }
 
 .quizz__title{

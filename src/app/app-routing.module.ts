@@ -5,8 +5,10 @@ import { QuizzComponent } from './pages/quizz/quizz.component';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'quizz', component: QuizzComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'quizz/:id', component: QuizzComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  // {path: '**', redirectTo: '/home', pathMatch: 'full'}
 
 ];
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuizzService } from 'src/app/components/services/quizz.service';
+import { quizzInterface } from 'src/app/interfaces/quizz';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  quizzes:quizzInterface[] = []
+
+  constructor(private quizzService: QuizzService) { }
 
   ngOnInit(): void {
+    this.quizzes = this.quizzService.quizzes
   }
 
 }
