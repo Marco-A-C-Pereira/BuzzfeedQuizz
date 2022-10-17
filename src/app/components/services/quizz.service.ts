@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { quizzInterface } from 'src/app/interfaces/quizz';
+import { quizzInterface } from 'src/app/model/quizz';
 import quizz__questions from '../../../assets/data/quizz__questions.json';
 
 @Injectable({

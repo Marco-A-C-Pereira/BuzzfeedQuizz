@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { quizzInterface } from 'src/app/interfaces/quizz';
+import { quizzInterface } from 'src/app/model/quizz';
 
 @Component({
   selector: 'app-quizz-card',

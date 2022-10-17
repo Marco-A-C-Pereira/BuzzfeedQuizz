@@ -1,17 +1,18 @@
 <div class="quizz__container">
   <div class="quizz__top">
     <div class="quizz__title">
-      <h3>Que tipo de betoneira você é ?</h3>
+      <h3> {{ quizzFull.title }} </h3>
     </div>
     <div class="quizz__question">
-      <h4>Você costuma consumir qual tipo de cimento ?</h4>
+      <h4> {{ quizzQuestions[questionCounter].question }} </h4>
     </div>
   </div>
   <div class="quizz__options">
-    <app-option></app-option>
-    <app-option></app-option>
-    <app-option></app-option>
-    <app-option></app-option>
-    <app-option></app-option>
+    <app-option
+    *ngFor="let option of quizzQuestions[questionCounter].options"
+    [option]="option"
+    (selectedOption)="optionSelected($event)"
+    >
+  </app-option>
   </div>
 </div>

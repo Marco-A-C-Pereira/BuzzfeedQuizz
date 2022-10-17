@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizzService } from 'src/app/components/services/quizz.service';
-import { quizzInterface } from 'src/app/interfaces/quizz';
+import { quizzInterface } from 'src/app/model/quizz';
 
 @Component({
   selector: 'app-home',
