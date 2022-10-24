@@ -52,14 +52,8 @@
         }
       ],
       "results": [
-        {
-          "alias": "A",
-          "result": "Você muito provavelmente seria um super vilão!"
-        },
-        {
-          "alias": "B",
-          "result": "Você muito provavelmente seria um super Herói!"
-        }
+        {"A": "Você muito provavelmente seria um super vilão!" },
+        {"B": "Você muito provavelmente seria um super Herói!"}
       ]
     },
     {
@@ -76,14 +70,8 @@
         }
       ],
       "results": [
-        {
-          "alias": "A",
-          "result": "Você seria uma betoneira industrial"
-        },
-        {
-          "alias": "B",
-          "result": "Você seria uma betoneira civil"
-        }
+        {"A": "Você seria uma betoneira industrial"},
+        {"B": "Você seria uma betoneira civil" }
       ]
     }
   ]

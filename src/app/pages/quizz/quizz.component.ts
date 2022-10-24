@@ -9,19 +9,21 @@ import { quizzInterface } from 'src/app/model/quizz';
   templateUrl: './quizz.component.html',
   styleUrls: ['./quizz.component.css']
 })
+
+
+
 export class QuizzComponent implements OnInit {
 
-  id: any = "";
-  // Any válido porque o componente só exibe o valor da rota caso um quizz com o ID exista
+  id: any = ""; // Any válido porque o componente só exibe o valor da rota caso um quizz com o ID exista
 
   quizzFull:quizzInterface = {} as quizzInterface;
 
   quizzQuestions:questionInterface[] = []
   questionCounter:number = 0;
 
-  quizzAnswer:string[] = []
-  quizzAnswerCount:any = {}
+  quizzAnswer:string[] = [];
 
+  quizzResult:string = "";
   finished:boolean = false;
 
   constructor(
@@ -36,7 +38,6 @@ export class QuizzComponent implements OnInit {
     // console.log(this.quizzFull);
 
     this.quizzQuestions = this.quizzFull.questions;
-    console.log(this.quizzQuestions)
   }
 
   optionSelected(alias:string): void{
@@ -45,33 +46,35 @@ export class QuizzComponent implements OnInit {
 
     if( this.questionCounter === this.quizzQuestions.length ) {
 
-      this.resultCalc()
+    type ObjectKey = keyof typeof this.quizzFull.results;
+      const resultKey = this.resultCalc(this.quizzAnswer) as ObjectKey;
+
+
+
+
+
+
+      // this.quizzResult = this.quizzFull.results[resultKey]
+      // this.quizzResult = this.resultCalc(this.quizzAnswer)
+      console.log(this.quizzFull.results)
       this.finished = true;
      }
 
   }
 
-  resultCalc(){
-    let result:string = "";
-    let previous = 0
+  resultCalc(answrr:string[]):string {
+    let item = answrr[0]
+    let itemCount:any = {}
 
-    for (const alias of this.quizzAnswer) {
-      if (this.quizzAnswerCount[alias]) { this.quizzAnswerCount[alias] += 1 }
-      else { this.quizzAnswerCount[alias] = 1; }
+    for (let i in answrr) {
+      const currentItem = answrr[i];
+
+      itemCount[currentItem] ?  itemCount[currentItem]++ : itemCount[currentItem] = 1
+      if (itemCount[item] < itemCount[currentItem]) item = currentItem ;
     }
 
-    console.log(this.quizzAnswerCount)
 
-
-    for (const [alias, count] of Object.entries(this.quizzAnswerCount)) {
-      console.log(alias);
-      console.log(count);
-      if ( count > previous ) { result = alias }
-
-    }
-
-    console.log(`Seu resultado é: ${result}`)
-
+    return item
 
   }
 

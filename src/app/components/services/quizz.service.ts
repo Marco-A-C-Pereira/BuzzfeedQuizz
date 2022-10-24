@@ -13,6 +13,7 @@ export class QuizzService {
 
   quizzes: quizzInterface[] = []
 
+
  getById(id:string):quizzInterface{
 
  let result = this.quizzes.find(obj => obj.id === Number(id));

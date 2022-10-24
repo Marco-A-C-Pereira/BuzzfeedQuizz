@@ -10,8 +10,5 @@ export interface quizzInterface {
         alias: string;
       }[];
     }[];
-    results: {
-      alias: string;
-      result: string;
-    }[];
+    results:{}[];
 }

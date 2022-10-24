@@ -1,18 +1,30 @@
-<div class="quizz__container">
-  <div class="quizz__top">
-    <div class="quizz__title">
-      <h3> {{ quizzFull.title }} </h3>
+<section *ngIf=!finished>
+  <div class="quizz__container">
+    <div class="quizz__top">
+      <div class="quizz__title">
+        <h3> {{ quizzFull.title }} </h3>
+      </div>
+      <div class="quizz__question">
+        <h4> {{ quizzQuestions[questionCounter].question }} </h4>
+      </div>
     </div>
-    <div class="quizz__question">
-      <h4> {{ quizzQuestions[questionCounter].question }} </h4>
-    </div>
+    <div class="quizz__options">
+      <app-option
+      *ngFor="let option of quizzQuestions[questionCounter].options"
+      [option]="option"
+      (selectedOption)="optionSelected($event)"
+      >
+    </app-option>
+    </div>''
   </div>
-  <div class="quizz__options">
-    <app-option
-    *ngFor="let option of quizzQuestions[questionCounter].options"
-    [option]="option"
-    (selectedOption)="optionSelected($event)"
+</section>
+
+<section *ngIf=finished>
+  <div class="quizz__container">
+    <app-result
+    [result] =
     >
-  </app-option>
+    </app-result>
   </div>
-</div>
+</section>
+
