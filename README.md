@@ -1,7 +1,7 @@
 # Angular quizz
-Quizz construído em Angular com o intuíto de aprimorar meus conhecimentos.
+Quizz construído em Angular com o intuito de aprimorar meus conhecimentos.
 
-Maior desafio com toda certeza foi trabalhar com shapagem de objetos e o algorítimo de frequência.
+Maior desafio com toda certeza foi trabalhar com shapagem de objetos e o algoritmo de frequência.
 
 ## Estado do projeto:
 
