@@ -10,7 +10,7 @@ Maior desafio com toda certeza foi trabalhar com shapagem de objetos e o algorí
 - ❌ C.R.U.D dos testes
 - ❌ Adicionar imagens únicas para cada teste
 
-### Todo>
+### Todo
 - C.R.U.D
 - Imagens
 - Refinar as animações (CSS)
