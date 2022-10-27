@@ -10,9 +10,12 @@ export class QuizzCardComponent implements OnInit {
 
  @Input() quizz:quizzInterface = {} as quizzInterface
 
+  completed:string = ""
+
   constructor() { }
 
   ngOnInit(): void {
+    this.completed = localStorage.getItem(this.quizz.id.toString())! ? "star-on" : "star-off";
   }
 
 }

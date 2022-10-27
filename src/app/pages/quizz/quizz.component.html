@@ -1,4 +1,4 @@
-<section *ngIf=!finished>
+<section *ngIf="!finished && !loading">
   <div class="quizz__container">
     <div class="quizz__top">
       <div class="quizz__title">
@@ -15,14 +15,19 @@
       (selectedOption)="optionSelected($event)"
       >
     </app-option>
-    </div>''
+    </div>
   </div>
 </section>
 
+<section *ngIf=loading class="loading__container">
+  <app-loading></app-loading>
+</section>
+
+
 <section *ngIf=finished>
-  <div class="quizz__container">
+  <div class="result__container">
     <app-result
-    [result] =
+    [result] = "quizzResult"
     >
     </app-result>
   </div>

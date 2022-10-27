@@ -24,6 +24,8 @@ export class QuizzComponent implements OnInit {
   quizzAnswer:string[] = [];
 
   quizzResult:string = "";
+
+  loading:boolean = false
   finished:boolean = false;
 
   constructor(
@@ -47,17 +49,19 @@ export class QuizzComponent implements OnInit {
     if( this.questionCounter === this.quizzQuestions.length ) {
 
     type ObjectKey = keyof typeof this.quizzFull.results;
-      const resultKey = this.resultCalc(this.quizzAnswer) as ObjectKey;
+    const resultKey = this.resultCalc(this.quizzAnswer) as ObjectKey;
 
+      this.quizzResult = this.quizzFull.results[resultKey]
+      console.log(this.quizzResult)
 
+      this.loading = true;
+      setTimeout(() => {
+        this.loading = false;
+        this.finished = true
+      }, 6000);
 
+      localStorage.setItem(this.id, "done");
 
-
-
-      // this.quizzResult = this.quizzFull.results[resultKey]
-      // this.quizzResult = this.resultCalc(this.quizzAnswer)
-      console.log(this.quizzFull.results)
-      this.finished = true;
      }
 
   }

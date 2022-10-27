@@ -12,15 +12,34 @@
   width: 100%;
   padding: 20px;
 
-  background: #EEA947;
-  color: #008fe7;
-  text-shadow: 2px 2px #EB8A00;;
-  border: 2px solid #00619E;
+  background: #EE4E34;
+  color: antiquewhite;
+  text-shadow: 2px 2px #c5412d;;
+  border: 2px solid #77d6aa;
   border-radius: 10px;
 
   font-size: 20px;
   font-family: 'Open Sans';
   font-weight: bold;
+}
+
+.btn__appear{
+  animation: 1s introduction ease-out;
+}
+
+@keyframes introduction{
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .option__container > button:hover{
